@@ -4,17 +4,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyComponent {
-
-    private String myComponentName;
-
-    public MyComponent(){
-        System.out.println("MyComponent constructor has been called");
-        this.myComponentName = "Karl Leeds";
-    }
-
-    public String getMyComponentName(){
-        System.out.println("MyComponent.getMyComponentName() has been called");
-        return myComponentName;
-    }
-
+	public String myComponentName;
+	
+	public MyComponent() {
+	}
+	
+	public MyComponent(String myComponentName) {
+		System.out.println("component created");
+		this.myComponentName = myComponentName;
+	}
+	
+	public String getMyComponentName() {
+		System.out.println("component name called");
+		return myComponentName;
+	}
 }

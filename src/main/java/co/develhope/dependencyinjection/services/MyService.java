@@ -6,19 +6,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyService {
-
-    private MyComponent myComponent;
-
-    // constructor based injection
-    @Autowired
-    public MyService(MyComponent myComponent){
-        System.out.println("MyService constructor has been called");
-        this.myComponent = myComponent;
-    }
-
-    public String getName(){
-        System.out.println("MyService.getName() has been called");
-        return myComponent.getMyComponentName();
-    }
-
+	private MyComponent myComponent;
+	
+	@Autowired
+	public MyService(MyComponent myComponent) {
+		this.myComponent = myComponent;
+	}
+	
+	public String getName() {
+		return myComponent.getMyComponentName();
+	}
 }
